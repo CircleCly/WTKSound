@@ -1,0 +1,3 @@
+displayName = 三国杀音效包
+author = CircleCly
+version = 0.5

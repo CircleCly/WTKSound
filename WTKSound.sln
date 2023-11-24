@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WTKSound", "WTKSound.csproj", "{CEDE53FB-91B6-4708-9460-777737350996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEDE53FB-91B6-4708-9460-777737350996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEDE53FB-91B6-4708-9460-777737350996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEDE53FB-91B6-4708-9460-777737350996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEDE53FB-91B6-4708-9460-777737350996}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {752311FD-C7F9-4354-BAE1-53FF82FA2EAF}
+	EndGlobalSection
+EndGlobal
