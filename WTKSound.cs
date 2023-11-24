@@ -28,6 +28,7 @@ namespace WTKSound
         public static readonly SoundEffect PLAYER_DEATH = new SoundEffect("player_death", 2);
         public static readonly SoundEffect FIRE_DEATH = new SoundEffect("fire_death");
         public static readonly SoundEffect POISON_DEATH = new SoundEffect("poison_death");
+        public static readonly SoundEffect FALL_DEATH = new SoundEffect("fall_death");
         
     }
 }

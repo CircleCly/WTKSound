@@ -90,19 +90,26 @@ namespace WTKSound
                 }
             }
         }
+
+        // Returns whether two death reasons are the same
+        private Boolean SameDeathReason(PlayerDeathReason a, PlayerDeathReason b)
+        {
+            return a.SourceOtherIndex == b.SourceOtherIndex;
+        }
         
         public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
         {
             if (isLocalPlayer())
             {
-                if (damageSource == Utils.DEATH_BY_BURN)
+                if (SameDeathReason(damageSource, Utils.DEATH_BY_BURN) || SameDeathReason(damageSource, Utils.DEATH_BY_LAVA))
                 {
                     WTKSound.FIRE_DEATH.PlaySound();
-                } else if (damageSource == Utils.DEATH_BY_POISON)
+                } else if (SameDeathReason(damageSource, Utils.DEATH_BY_POISON))
                 {
                     WTKSound.POISON_DEATH.PlaySound();
-                } else
-                {
+                } else if (SameDeathReason(damageSource, Utils.DEATH_BY_FALL)) {
+                    WTKSound.FALL_DEATH.PlaySound();
+                } else {
                     WTKSound.PLAYER_DEATH.PlaySound();
                 }
             }
@@ -133,7 +140,7 @@ namespace WTKSound
         {
             if (!target.friendly && target.lifeMax > 5)
             {
-                if (damageDone > 2 * target.lifeMax) {
+                if (damageDone > 1.5 * target.lifeMax) {
                     WTKSound.HEAVY_DAMAGE.PlaySound();
                     if (hit.DamageType == DamageClass.Melee)
                     {
@@ -145,7 +152,7 @@ namespace WTKSound
                     {
                         WTKSound.BIG_MAGIC.PlaySound();
                     }
-                } else if (damageDone > 1.5 * target.lifeMax)
+                } else if (damageDone > target.lifeMax)
                 {
                     WTKSound.BIG_DAMAGE.PlaySound();
                 }
