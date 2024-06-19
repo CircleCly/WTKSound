@@ -6,12 +6,31 @@ using Terraria.ID;
 
 namespace WTKSound
 {
+    class PotionSickTrigger : Trigger<Boolean>
+    {
+        public override bool TriggerCondition()
+        {
+            return current && !previous;
+        }
+    }
+
+    class InventoryItemsTrigger : Trigger<int>
+    {
+        public override bool TriggerCondition()
+        {
+            return current - previous >= 3;
+        }
+    }
+
     public class SoundedPlayer : ModPlayer
     {
         Boolean prevPotionSick = false;
         Boolean potionSick = false;
         int prevNumItems = 0;
         int numItems = 0;
+
+        PotionSickTrigger potionSickTrigger = new PotionSickTrigger();
+        InventoryItemsTrigger inventoryItemsTrigger = new InventoryItemsTrigger();
 
         public override void OnEnterWorld()
         {
@@ -23,9 +42,12 @@ namespace WTKSound
                     numItems++;
                 }
             }
-            prevNumItems = numItems;
-            potionSick = Player.HasBuff(BuffID.PotionSickness);
-            prevPotionSick = potionSick;
+            inventoryItemsTrigger.Update(numItems);
+            inventoryItemsTrigger.Update(numItems);
+
+            bool hasPotionSickness = Player.HasBuff(BuffID.PotionSickness);
+            potionSickTrigger.Update(hasPotionSickness);
+            potionSickTrigger.Update(hasPotionSickness);
         }
         public override void PostUpdate()
         {
@@ -42,9 +64,8 @@ namespace WTKSound
                     WTKSound.LOW_HP.PlaySound();
                 }
 
-                prevPotionSick = potionSick;
-                potionSick = Player.HasBuff(BuffID.PotionSickness);
-                if (potionSick && !prevPotionSick)
+                potionSickTrigger.Update(Player.HasBuff(BuffID.PotionSickness));
+                if (potionSickTrigger.TriggerCondition())
                 {
                     if (Player.Male)
                     {
@@ -57,7 +78,6 @@ namespace WTKSound
                 }
                 
 
-                prevNumItems = numItems;
                 numItems = 0;
                 for (int i = 0; i < Player.inventory.Length; i++)
                 {
@@ -66,10 +86,10 @@ namespace WTKSound
                         numItems++;
                     }
                 }
-
-                if (numItems - prevNumItems >= 3)
+                inventoryItemsTrigger.Update(numItems);
+                if (inventoryItemsTrigger.TriggerCondition())
                 {
-                    WTKSound.MASS_LOOT.PlaySound(60);
+                    WTKSound.MASS_LOOT.PlaySound();
                 }
 
             }

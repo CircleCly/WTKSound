@@ -22,7 +22,7 @@ namespace WTKSound
         public static readonly SoundEffect BIG_DAMAGE = new SoundEffect("big_damage");
 
         public static readonly SoundEffect MOVING_FIGHT = new SoundEffect("moving_fight", 7);
-        public static readonly SoundEffect MASS_LOOT = new SoundEffect("mass_loot", 2);
+        public static readonly SoundEffect MASS_LOOT = new SoundEffect("mass_loot", 2, 60);
 
         public static readonly SoundEffect PLAYER_HURT = new SoundEffect("player_hurt", 3);
         public static readonly SoundEffect PLAYER_DEATH = new SoundEffect("player_death", 2);

@@ -15,21 +15,24 @@ namespace WTKSound
         public SoundStyle[] soundStyles;
         public int numVariants;
         public int timer = 0;
+        public int cd;
         public Random random = new Random();
 
-        public SoundEffect(String name)
+        public SoundEffect(String name, int cooldown = 600)
         {
             soundStyles = new SoundStyle[1];
             soundStyles[0] = new SoundStyle("WTKSound/Sounds/" + name);
+            cd = cooldown;
         }
 
-        public SoundEffect(String name, int numVariants)
+        public SoundEffect(String name, int numVariants, int cooldown = 600)
         {
             soundStyles = new SoundStyle[numVariants];
             for (int i = 0; i < numVariants; i++)
             {
                 soundStyles[i] = new SoundStyle("WTKSound/Sounds/" + name + "_" + (i + 1));
             }
+            cd = cooldown;
         }
 
         public void PlaySound(int cd)
@@ -44,7 +47,7 @@ namespace WTKSound
 
         public void PlaySound()
         {
-            PlaySound(600);
+            PlaySound(this.cd);
         }
 
         public override string ToString()
