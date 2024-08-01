@@ -1,0 +1,170 @@
+Configs: {
+	WTKSoundConfig: {
+		DisplayName: 三国杀音效设置
+
+		Headers: {
+			PlayerStats: 玩家属性
+			PlayerActions: 玩家动作
+			EffectTriggers: 状态触发
+			DeathTriggers: 死亡触发
+			// General: General
+		}
+
+		LOW_HP: {
+			Label: 低血量
+			Tooltip: ""
+		}
+
+		LOW_HP_REGEN: {
+			Label: 低生命值恢复
+			Tooltip: ""
+		}
+
+		HEAL_MALE: {
+			Label: 男性使用生命恢复药水
+			Tooltip: ""
+		}
+
+		HEAL_FEMALE: {
+			Label: 女性使用生命恢复药水
+			Tooltip: ""
+		}
+
+		BIG_STRIKE: {
+			Label: 造成大量近战伤害
+			Tooltip: ""
+		}
+
+		BIG_SHOT: {
+			Label: 造成大量远程伤害
+			Tooltip: ""
+		}
+
+		BIG_MAGIC: {
+			Label: 造成大量魔法伤害
+			Tooltip: ""
+		}
+
+		BIG_SUMMON: {
+			Label: 造成大量召唤伤害
+			Tooltip: ""
+		}
+
+		HEAVY_DAMAGE: {
+			Label: 造成大量任意伤害
+			Tooltip: ""
+		}
+
+		BIG_DAMAGE: {
+			Label: 造成较多伤害
+			Tooltip: ""
+		}
+
+		MOVING_FIGHT: {
+			Label: 移动时战斗
+			Tooltip: ""
+		}
+
+		MASS_LOOT: {
+			Label: 搜刮大量物品
+			Tooltip: ""
+		}
+
+		PLAYER_HURT: {
+			Label: 玩家受伤
+			Tooltip: ""
+		}
+
+		THORNS: {
+			Label: 触发荆棘效果
+			Tooltip: ""
+		}
+
+		PLAYER_DEATH: {
+			Label: 玩家死亡
+			Tooltip: ""
+		}
+
+		FIRE_DEATH: {
+			Label: 玩家死于火焰
+			Tooltip: ""
+		}
+
+		POISON_DEATH: {
+			Label: 玩家死于中毒
+			Tooltip: ""
+		}
+
+		FALL_DEATH: {
+			Label: 玩家坠落死亡
+			Tooltip: ""
+		}
+
+		SHADOW_DODGE: {
+			Label: 触发影避效果
+			Tooltip: ""
+		}
+
+		ShowSoundMessages: {
+			Label: 在聊天栏显示语音字幕
+			Tooltip: ""
+		}
+	}
+
+	SoundConfigData: {
+		Tooltip: ""
+
+		enabled: {
+			Label: 开启
+			Tooltip: ""
+		}
+
+		cdSec: {
+			Label: 冷却时间（秒）
+			Tooltip: ""
+		}
+	}
+}
+
+SoundMessages: {
+	shadow_dodge_msg_1: 此阵变化，岂是汝等可解?
+	shadow_dodge_msg_0: 八阵连心，日月同辉!
+	fall_death_msg_0: 龙麟崩损，坠于九天！
+	poison_death_msg_0: 背疮难治，世子难继...
+	fire_death_msg_0: 撤，快撤！
+	player_death_msg_3: 望吾死后，江东依然无人敢犯...
+	player_death_msg_2: 盛只恨，不能再为主公破敌制胜了...
+	player_death_msg_1: 龙麟崩损，坠于九天！
+	player_death_msg_0: 龙身虽死，魂魄不灭！
+	thorns_msg_1: 鼠辈，竟敢伤我！
+	thorns_msg_0: 伤我者，十倍奉还！
+	player_hurt_msg_2: 就这样吧。
+	player_hurt_msg_1: 主公之忧，吾之所思也。
+	player_hurt_msg_0: 一筹一划，一策一略。
+	mass_loot_msg_1: 裹甲衔枚，劫营如入无人之境！
+	mass_loot_msg_0: 劫营速战，措手不及！
+	moving_fight_msg_1: 腾龙行云，首尾不见！
+	moving_fight_msg_0: 能进能退，乃真正法器！
+	big_damage_msg_0: 癫狂屠戮！
+	heavy_damage_msg_0: 无双，万军取首！
+	big_magic_msg_1: 纵如王侯将相，亦须俯首待裁！
+	big_magic_msg_0: 我有三千炼狱，待汝万世轮回！
+	big_shot_msg_1: 吾虽年迈，箭矢犹锋！
+	big_shot_msg_0: 矢贯坚石，劲冠三军！
+	big_strike_msg_5: 区区数百魏军，看我一击灭之！
+	big_strike_msg_4: 战将临阵，斩关刈城！
+	big_strike_msg_3: 以攻为守，破敌卫疆！
+	big_strike_msg_2: 这长江天险后，便是江东铁壁！
+	big_strike_msg_1: 若敢来犯，必叫你大败而归！
+	big_strike_msg_0: 犯大吴疆土者，盛必击而破之！
+	heal_female_msg_0: 桃
+	heal_male_msg_0: 桃
+	low_hp_regen_msg_1: 尔等，竟如此歹毒！
+	low_hp_regen_msg_0: 战火燃尽英雄胆！
+	low_hp_msg_1: 背水一战，无胜便死！
+	low_hp_msg_0: 置于死地，方能后生！
+	big_summon_msg_3: 主公以有道之师伐不义之徒，胜之必矣。
+	big_summon_msg_2: 主公有此四胜，纵绍强亦可败之。
+	big_summon_msg_1: 主公若不时定，待四方生心，则无及矣。
+	big_summon_msg_0: 此时进之多弊，守之多利，愿主公熟虑。
+}

@@ -11,9 +11,8 @@ namespace WTKSound
         public static readonly SoundEffect LOW_HP = new SoundEffect("low_hp", 2);
         public static readonly SoundEffect LOW_HP_REGEN = new SoundEffect("low_hp_regen", 2);
 
-        public static readonly SoundEffect BOSS_AWAKEN = new SoundEffect("boss_awaken");
-        public static readonly SoundEffect HEAL_MALE = new SoundEffect("heal_male");
-        public static readonly SoundEffect HEAL_FEMALE = new SoundEffect("heal_female");
+            MOVING_FIGHT = new SoundEffect("moving_fight", 7);
+            MASS_LOOT = new SoundEffect("mass_loot", 2, 60);
 
         public static readonly SoundEffect BIG_STRIKE = new SoundEffect("big_strike", 2);
         public static readonly SoundEffect BIG_SHOT = new SoundEffect("big_shot", 2);
